@@ -1,0 +1,55 @@
+{
+    "name": "Hoang Nham",
+    "description": "Project Laravel Framework with MySQL and Mongodb.",
+    "keywords": ["framework", "laravel"],
+    "license": "MIT",
+    "require": {
+        "laravel/framework": "4.1.24",
+        "jenssegers/mongodb": "*",
+        "zizaco/entrust": "dev-master",
+        "pingpong/widget": "dev-master",
+        "maatwebsite/excel": "dev-master",
+        "way/generators": "dev-master",
+        "mews/captcha": "dev-master",
+        "jenssegers/agent": "*",
+        "barryvdh/laravel-ide-helper": "1.*",
+        "facebook/php-sdk": "dev-master",
+        "moltin/laravel-cart": "dev-master"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*"
+    },
+    "autoload": {
+        "classmap": [
+            "app/commands",
+            "app/controllers",
+            "app/models",
+            "app/database/migrations",
+            "app/database/seeds",
+            "app/tests/TestCase.php"
+        ],
+        "psr-0": {
+            "HoangVN": "app/library",
+            "Moltin": "src/"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "php artisan clear-compiled",
+            "php artisan optimize"
+        ],
+        "post-update-cmd": [
+            "php artisan clear-compiled",
+            "php artisan ide-helper:generate",
+            "php artisan optimize"
+        ],
+        "post-create-project-cmd": [
+            "php artisan key:generate"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "prefer-stable": false,
+    "minimum-stability": "dev"
+}

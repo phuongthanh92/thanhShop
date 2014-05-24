@@ -1,0 +1,43 @@
+.stepy-header { list-style: none; padding: 0;margin-bottom: 10px; width: 100%}
+  .stepy-header li { cursor: pointer; float: left; padding: 15px }
+    .stepy-header li.stepy-error { background: url('error.png') no-repeat right top }
+    .stepy-header li div { color: #CCC; font: bold 1.2em verdana; text-shadow: 1px 1px #F8F8F8 }
+    .stepy-header li.stepy-active div { color: #369; cursor: auto }
+    .stepy-header li span { color: #CCC;}
+    .stepy-header li.stepy-active span { color: #BBB }
+
+.stepy-step { border: 1px solid #BBB; clear: left; padding: 15px 20px; -khtml-border-radius: 3px; -moz-border-radius: 3px; -opera-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px }
+  .stepy-step legend { color: #4080BF; font: bold 1.8em arial; letter-spacing: 0.7px; padding: 0 2px 3px }
+  .stepy-navigator { height: 33px; margin-top: 20px }
+    .button-back { float: left }
+
+    .button-next,
+    .stepy-navigator input[type="submit"] { float: right }
+
+    .button-back,
+    .button-next,
+    .stepy-navigator input[type="submit"] { border: 1px solid #CCC; color: #7F0055; cursor: pointer; font: 1.2em verdana; padding: 7px 15px 8px; text-decoration: none; -khtml-border-radius: 3px; -moz-border-radius: 3px; -opera-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px }
+
+    .stepy-navigator input[type="submit"] { background-color: transparent; border-color: #CCC; margin-bottom: 0; padding: 7px 15px 24px; min-width: 90px }
+
+    .button-back:hover,
+    .button-next:hover,
+    .stepy-navigator input[type="submit"]:hover { border-color: #BBB; color: #B07 }
+.error-image .stepNb {background:#C62626 !important}
+.error-image div{color:#C62626 !important}
+.stepy-form fieldset {
+    font-family: sans-serif;
+    border: 2px solid #1F497D;
+    background: #ddd;
+}
+
+.stepy-form fieldset legend {
+    background: #1F497D;
+    opacity: 0.8;
+    color: #fff;
+    padding: 5px 10px ;
+    font-size: 32px;
+    border-radius: 5px;
+    box-shadow: 0 0 0 5px #ddd;
+    margin-left: 20px;
+}
