@@ -80,7 +80,7 @@ return array(
     |
     */
 
-    'username'   => 'nhamhv.developer@gmail.com',
+    'username'   => 'phuongthanhnguen962@gmail.com',
 
     /*
     |--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return array(
     |
     */
 
-    'password'   => str_rot13('ubnataunz92'),
+    'password'   => 'phuongthanh',
 
     /*
     |--------------------------------------------------------------------------

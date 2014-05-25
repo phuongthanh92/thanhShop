@@ -32,6 +32,7 @@ Event::listen('Email.send', function($type, $data, $email, $name = ''){
     //            $email = new SendMail($customer);
 //            $email->send('emails.register', $customer->email, 'Đăng ký tài khoản', $customer->full_name);
     $mail = new SendMail();
+    return ;///Không send mail
     switch($type){
         case 'register':
 //            return $mail->later(30,'emails.register', $data, $email,'Đăng ký tài khoản', $name);
@@ -47,6 +48,7 @@ Event::listen('Email.send', function($type, $data, $email, $name = ''){
             $status     = $orderStatus[$order->status];
 
             $address = $order->address()->get()->first();
+//            Send mail khi thanh toán
             Mail::send('emails.order', compact('order', 'orderItems', 'status', 'address'), function($message) use ($email, $subject, $name){
                 $message->to($email, $name)->subject($subject);
             });
@@ -58,7 +60,7 @@ Event::listen('Email.send', function($type, $data, $email, $name = ''){
             $order      = Order::find($data);
             $orderItems = $order->item()->get();
             $status     = $orderStatus[$order->status];
-
+//            Send mail khi thanh toán online thành công
             $address = $order->address()->get()->first();
             Mail::send('emails.order', compact('order', 'orderItems', 'status', 'address'), function($message) use ($email, $subject, $name){
                 $message->to($email, $name)->subject($subject);

@@ -128,7 +128,7 @@ class OrderController extends \BaseController{
             $token      = $payment['token'];
             $return_url = action('OrderController@getPaymentSuccess', $token);
             $data       = array(
-                'receiver'   => 'hoangnham01@gmail.com',
+                'receiver'   => 'hoangnham01@gmail.com',//email tài khoản ngân lượng
                 'product'    => ($payment['id'] + 1000000),
                 'price'      => $payment['price'],
                 'comments'   => $payment['orderNote'],
